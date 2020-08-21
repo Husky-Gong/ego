@@ -2,6 +2,8 @@ package com.ego.manage.controller;
 
 import com.ego.commons.pojo.EgoResult;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -47,5 +49,16 @@ public class DispatcherController {
     @RequestMapping("/main")
     public String toMain(){
         return "index";
+    }
+
+    /**
+     * 页面跳转方法。请求地址就是返回的页面视图文件名。
+     * 使用restful参数处理。
+     * @param page
+     * @return
+     */
+    @GetMapping("/{page}")
+    public String toPage(@PathVariable("page") String page){
+        return page;
     }
 }
