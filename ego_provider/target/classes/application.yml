@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: mybatis
+dubbo:
+  application:
+    name: ego-provider
+  registry:
+    address: zookeeper://39.102.63.113:2181

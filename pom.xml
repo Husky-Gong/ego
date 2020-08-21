@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bjsxt</groupId>
+    <artifactId>ego</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ego_pojo</module>
+        <module>ego_mapper</module>
+        <module>ego_api</module>
+        <module>ego_provider</module>
+        <module>ego_manage</module>
+        <module>ego_commons</module>
+        <module>ego_commons</module>
+        <module>ego_manage</module>
+        <module>ego_mapper</module>
+        <module>ego_pojo</module>
+        <module>ego_provider</module>
+        <module>ego_api</module>
+    </modules>
+
+    <!-- 统一版本约束 -->
+    <properties>
+        <spring-boot-version>2.3.0.RELEASE</spring-boot-version>
+        <dubbo-version>2.7.6</dubbo-version>
+        <curator-version>4.3.0</curator-version>
+        <mybatis-plus-version>3.3.1</mybatis-plus-version>
+        <druid-springboot-version>1.1.10</druid-springboot-version>
+        <fastdfs-version>1.27</fastdfs-version>
+        <common-lang3-version>3.4</common-lang3-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- dubbo -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator-version}</version>
+            </dependency>
+            <!-- mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus-version}</version>
+            </dependency>
+            <!-- druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-springboot-version}</version>
+            </dependency>
+
+            <!-- fastdfs -->
+            <dependency>
+                <groupId>cn.bestwu</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-lang3-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
