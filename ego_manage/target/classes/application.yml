@@ -3,6 +3,10 @@ dubbo:
     name: ego-manage
   registry:
     address: zookeeper://39.102.63.113:2181
+  provider:
+    timeout: 30000
+  consumer:
+    timeout: 30000
 server:
   port: 8080
 spring:
