@@ -52,6 +52,7 @@ $(function(){
 			if($('#menu').tree("isLeaf",node.target)){
 				var tabs = $("#tabs");
 				var tab = tabs.tabs("getTab",node.text);
+				<!-- 如果叶子节点页面存在，那么就跳转到相应的页面，否则就新建一个页面 -->
 				if(tab){
 					tabs.tabs("select",node.text);
 				}else{
